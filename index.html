@@ -977,6 +977,185 @@
     z-index: 1;
   }
   .hero .hero-bg, .hero .hero-content, .hero .scroll-hint { position: relative; z-index: 2; }
+  /* ===== MODERN PREMIUM FRONT ===== */
+
+.hero {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(197,155,55,.13), transparent 30%),
+    linear-gradient(135deg, #050706 0%, #0b100d 55%, #030504 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 49.8%, rgba(212,174,74,.08) 50%, transparent 50.2%),
+    linear-gradient(0deg, transparent 49.8%, rgba(212,174,74,.05) 50%, transparent 50.2%);
+  background-size: 120px 120px;
+  opacity: .25;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  padding: 150px 20px 120px;
+}
+
+.hero-eyebrow {
+  color: #d8b65a;
+  letter-spacing: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(58px, 10vw, 125px);
+  line-height: .85;
+  letter-spacing: -4px;
+  margin: 0;
+  text-shadow: 0 15px 45px rgba(0,0,0,.7);
+}
+
+.hero h1 .line1 {
+  color: #ffffff;
+}
+
+.hero h1 .line2 {
+  color: #d6ad3c;
+  font-style: italic;
+}
+
+.hero-sub {
+  margin: 35px auto;
+  color: rgba(255,255,255,.65);
+  letter-spacing: 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-cta a {
+  min-width: 170px;
+  padding: 15px 25px;
+  border-radius: 4px;
+  transition: .3s ease;
+}
+
+.hero-cta .btn-primary {
+  background: linear-gradient(135deg, #e1bd55, #a87d1e);
+  color: #080a08;
+  border: none;
+  box-shadow: 0 10px 30px rgba(214,173,60,.2);
+}
+
+.hero-cta .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(214,173,60,.35);
+}
+
+.hero-cta .btn-outline {
+  border: 1px solid rgba(214,173,60,.45);
+  background: rgba(255,255,255,.025);
+  backdrop-filter: blur(10px);
+}
+
+.hero-cta .btn-outline:hover {
+  background: rgba(214,173,60,.12);
+  border-color: #d6ad3c;
+  transform: translateY(-3px);
+}
+
+/* Instagram */
+.instagram-btn {
+  border: 1px solid rgba(214,173,60,.45);
+  color: #d6ad3c;
+  background: rgba(255,255,255,.025);
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: .3s ease;
+}
+
+.instagram-btn:hover {
+  background: #d6ad3c;
+  color: #080a08;
+  transform: translateY(-3px);
+}
+
+/* Modern Stats */
+.stats-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(10,15,12,.78);
+  backdrop-filter: blur(18px);
+  border-top: 1px solid rgba(214,173,60,.18);
+  padding: 28px 5%;
+  z-index: 10;
+}
+
+.stat-number {
+  color: #d6ad3c;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.stat-label {
+  color: rgba(255,255,255,.45);
+  letter-spacing: 2px;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero-content {
+    padding-top: 170px;
+    padding-bottom: 180px;
+  }
+
+  .hero h1 {
+    font-size: 68px;
+    letter-spacing: -3px;
+  }
+
+  .hero-sub {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .hero-cta a,
+  .instagram-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .stats-bar {
+    padding: 18px 8px;
+  }
+
+  .stat-number {
+    font-size: 23px;
+  }
+}
 </style>
 </head>
 <body>
